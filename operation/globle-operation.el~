@@ -1,0 +1,8 @@
+(provide 'globle-operation)
+;; windows-operations
+
+;;  split window
+(global-set-key (kbd "M-2") 'split-window-right)
+(global-set-key (kbd "M-3") 'split-window-below)
+(global-set-key (kbd "M-0") 'delete-window)
+(global-set-key (kbd "C-c M-0") 'kill-buffer-and-window)
