@@ -69,8 +69,8 @@
 (add-hook 'after-init-hook #'global-ycmd-mode)  
 (setq ycmd-force-semantic-completion t)
 (setq ycmd-global-config t)  
-(set-variable 'ycmd-server-command (quote ("python" "/home/walter/code/ycmd/ycmd")))  
-(set-variable 'ycmd-global-config "/home/walter/code/ycmd/cpp/ycm/.ycm_extra_conf.py")  
+(set-variable 'ycmd-server-command (quote ("python" "/sources/git/ycmd/ycmd")))  
+(set-variable 'ycmd-global-config "/sources/git/ycmd/cpp/ycm/.ycm_extra_conf.py")  
 ;(set-variable 'ycmd-extra-conf-whitelist '("/home/walter/code/daily_report_system/v1.0/*"))
 (company-ycmd-setup)  
 (flycheck-ycmd-setup)  
@@ -93,3 +93,7 @@
 ;; (setq pyim-page-length 5)
 ;;   (add-hook 'emacs-startup-hook
 ;;             #'(lambda () (pyim-restart-1 t)))
+
+;;; mc config
+(add-to-list 'load-path "~/.emacs.d/addons/mc/")
+(require 'multiple-cursors)
