@@ -66,11 +66,15 @@
 (require 'flycheck-ycmd)
 (add-hook 'after-init-hook #'global-company-mode)
 (add-hook 'after-init-hook #'global-flycheck-mode)
-(add-hook 'after-init-hook #'global-ycmd-mode)  
+(add-hook 'after-init-hook #'global-ycmd-mode)
+
+(add-hook 'c-mode-hook 'company-mode)
+(add-hook 'c++-mode-hook 'company-mode)
+
 (setq ycmd-force-semantic-completion t)
 (setq ycmd-global-config t)  
 (set-variable 'ycmd-server-command (quote ("python" "/sources/git/ycmd/ycmd")))  
-(set-variable 'ycmd-global-config "/sources/git/ycmd/cpp/ycm/.ycm_extra_conf.py")  
+(set-variable 'ycmd-global-config "/sources/git/ycmd/.ycm_extra_conf.py")  
 ;(set-variable 'ycmd-extra-conf-whitelist '("/home/walter/code/daily_report_system/v1.0/*"))
 (company-ycmd-setup)  
 (flycheck-ycmd-setup)  
