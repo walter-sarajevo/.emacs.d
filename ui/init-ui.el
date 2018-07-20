@@ -70,6 +70,8 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/ui/theme")
 (load-theme 'molokai t)
 
+(add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
+
 (require 'fast-op)
 
 
